@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday</title>
+
+<style>
+body{
+    margin:0;
+    font-family:Arial,sans-serif;
+    background:linear-gradient(135deg,#ff9a9e,#fad0c4);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+}
+
+.container{
+    text-align:center;
+    background:white;
+    padding:40px;
+    border-radius:20px;
+    box-shadow:0 10px 30px rgba(0,0,0,.2);
+    max-width:600px;
+}
+
+h1{
+    color:#ff4081;
+    font-size:50px;
+}
+
+p{
+    font-size:20px;
+    color:#555;
+}
+
+input{
+    width:80%;
+    padding:12px;
+    border-radius:10px;
+    border:1px solid #ccc;
+    margin-top:20px;
+    font-size:16px;
+}
+
+button{
+    margin-top:20px;
+    padding:12px 25px;
+    border:none;
+    border-radius:10px;
+    background:#ff4081;
+    color:white;
+    font-size:18px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#e91e63;
+}
+
+#message{
+    margin-top:25px;
+    font-size:22px;
+    color:green;
+    display:none;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+<h1>🎂 Happy Birthday! 🎉</h1>
+
+<p>Write your birthday wish below and click the button.</p>
+
+<input type="text" id="wish" placeholder="Enter your birthday wish">
+
+<br>
+
+<button onclick="makeWish()">Blow Out Candles 🎂</button>
+
+<div id="message">
+✨ May all your wishes come true! ✨
+</div>
+
+</div>
+
+<script>
+function makeWish(){
+    const wish=document.getElementById("wish").value;
+
+    if(wish.trim()==""){
+        alert("Please enter a birthday wish.");
+        return;
+    }
+
+    document.getElementById("message").style.display="block";
+}
+</script>
+
+</body>
+</html>
